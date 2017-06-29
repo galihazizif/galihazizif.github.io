@@ -121,14 +121,28 @@ Selanjutnya, kita akan mencoba men-decrypt file "pesan.txt.gpg" yang sudah kita 
 
 <p><img src="/images/posts/cd84136144ffd8160e407.png" alt="list keys" /></p>
 
+<blockquote>
+  <p>Mengirim pesan dengan asymmetric key</p>
+  
+  <p>Sekarang kita akan melakukan enkripsi terhadap file pesan.txt menggunakan public-key milik joko</p>
+</blockquote>
+
+<p><img src="/images/posts/c1c46848744f21f8bae67.png" alt="asymmetric encrypt" /></p>
+
+<p>akan muncul peringatan dari gpg yang memberitahukan bahwa gpg tidak menjamin public-key tersebut benar-benar milik joko yang kita maksud, namun tidak masalah, karena kita mendapatkan public-key tersebut dari joko kita, bukan joko yang lain.<br />
+opsi --armor pada gambar diatas diberikan agar file keluaran dari gpg berbentuk ascii, bukan binary,, karena file binary akan tampak jelek jika dibuka pada text editor.. Namun bila diinginkan hasil berupa binary file, hapus opsi --armor<br />
+Secara default, jika opsi --armor diberikan akan menghasilkan file terenkripsi dengan tambahan extensi asc, pada contoh ini "pesan.txt.asc"</p>
+
+<p><img src="/images/posts/c7fa7f3dbd16cc4509f0f.png" alt="encrypted" /></p>
+
+<p>Pesan ucapan selamat lebaran telah terenkripsi menggunakan public-key milik joko, kita bisa mengirimkan file tersebut "pesan.txt.asc" melalui email atau media lainnya, orang lain yang tidak memilki private-key joko akan sangat sulit (kemungkinannya sangat kecil) untuk bisa melakukan dekripsi.<br />
+Berikut ini screenshot dari joko mengenai pesan selamat lebaran yang sudah kita kirimkan untuknya, pesan didekripsi menggunakan applikasi openKeyChain pada smartphone android milik joko.<br />
+<img src="/images/posts/54c43ecc9c14e7e690c7f.jpg" alt="from joko" /></p>
+
+<p>Sekian, semoga bermanfaat.</p>
+
         </div>
                 
-                    <nav class="article">
-                <ul>
-                                            <li>Next: <a class="next" href="/blog/2017/06/29/cobain-yuk" title="Time travel"><span class="title">Time travel</span></a></li>
-                                                                <li>Previous: <a class="previous" href="/blog/2013/02/04/highlight" title="Syntax Highlighting"><span class="title">Syntax Highlighting</span></a></li>
-                                    </ul>
-            </nav>
             </article>
 
 
