@@ -3,7 +3,7 @@
     <title><![CDATA[rempoah]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2017-06-29T21:22:44+07:00</updated>
+    <updated>2017-06-30T08:10:13+07:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -199,6 +199,29 @@ b. Serawak  </li>
 <p>ini teks <strong>tebal</strong><br />
 ini teks <em>italic</em><br />
 ini teks <em>italic</em></p>
+
+<hr />
+
+<h3 id="%5C%3E%3E%3E-blockquotes-">&#62;>> Blockquotes &lt;&lt;&lt;</h3>
+
+<hr />
+
+<p><em>&#42;Penulisan <strong>Blockquotes</strong>&#42;</em></p>
+
+<pre><code>    &gt; ini adalah blockquotes,
+    Joko sudah sarapan
+        &gt;ooo ya sudah
+</code></pre>
+
+<hr />
+
+<p><em>&#42;Hasil <strong>Blockquotes</strong>&#42;</em></p>
+
+<blockquote>
+  <p>ini adalah blockquotes,
+          Joko sudah sarapan
+  ooo ya sudah</p>
+</blockquote>
 ]]></content>
         </entry>
     </feed>
