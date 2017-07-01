@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home &mdash; rempoah &mdash; sebuah coretan virtual</title>
+        <title>Home &mdash; rempoah</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -142,7 +142,7 @@ Berikut ini screenshot dari joko mengenai pesan selamat lebaran yang sudah kita 
             <h4 id="pernakahkah-mendengar-kata-markdown%3F">Pernakahkah mendengar kata markdown?</h4>
 
 <blockquote>
-  <p>Kayak pernah denger</p>
+  <p>Apakah markdown itu?</p>
 </blockquote>
 
 <p>Pada tahun 2004 markdown dibuat oleh John Gruber dan Aaron Swartz dengan tujuan agar menjadi bahasa markup plain-text yang mudah dalam penulisan dan mudah untuk dibaca.  <em>(disarikan dari <a href="https://wikipedia.org">Wikipedia</a>)</em></p>
@@ -268,8 +268,6 @@ ini teks <em>italic</em></p>
 <p><em>&#42;Penulisan <strong>Blockquotes</strong>&#42;</em></p>
 
 <pre><code>    &gt; ini adalah blockquotes,
-    Joko sudah sarapan
-        &gt;ooo ya sudah
 </code></pre>
 
 <hr />
@@ -277,10 +275,168 @@ ini teks <em>italic</em></p>
 <p><em>&#42;Hasil <strong>Blockquotes</strong>&#42;</em></p>
 
 <blockquote>
-  <p>ini adalah blockquotes,
-          Joko sudah sarapan
-  ooo ya sudah</p>
+  <p>ini adalah blockquotes,</p>
 </blockquote>
+
+<h3 id="%5C%3E%3E%3E-link-">&#62;>> Link &lt;&lt;&lt;</h3>
+
+<hr />
+
+<p><em>&#42;Penulisan <strong>Link</strong>&#42;</em></p>
+
+<pre><code>    [Nama Tujuan](www.example.com)
+    [rempoah](http://rempoah.com)
+</code></pre>
+
+<hr />
+
+<p><em>&#42;Hasil <strong>Link</strong>&#42;</em></p>
+
+<p><a href="www.example.com">Nama Tujuan</a><br />
+<a href="http://rempoah.com">rempoah</a></p>
+
+<hr />
+
+<h3 id="%5C%3E%3E%3E-gambar-">&#62;>> Gambar &lt;&lt;&lt;</h3>
+
+<hr />
+
+<p><em>&#42;Penulisan Tag <strong>Gambar</strong>&#42;</em></p>
+
+<p>Untuk memasukan gambar pada markdwon sebenarnya sangat mudah, tinggal menambahkan tanda seru seperti pada saat membuat <strong>Link</strong>.</p>
+
+<pre><code>![Logo Google](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png)
+</code></pre>
+
+<hr />
+
+<p><em>&#42;Hasil <strong>Gambar</strong>&#42;</em></p>
+
+<p><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png" alt="Logo Google" /></p>
+
+<hr />
+
+<hr />
+
+<p>Mudah mudahan bermanfaat, selamat mencoba.</p>
+
+        </div>
+            </article>
+    <article>
+        <header>
+            <h2><a href="/blog/2017/06/01/belajar-php-curl/">belajar menggunakan cURL (libcurl) pada php</a></h2>
+        </header>
+        <div>
+            <p>Assalamu'laykum, kali ini kita akan belajar menggunakan cURL pada php. Bagi yang belum tahu, sebelum melangkah, sebaiknya terlebih dahulu kita selidiki secara singkat apakah sesungguhnya cURL itu.</p>
+
+<blockquote>
+  <p>cURL merupakan sebuah tools berbasis command line yang dihasilkan oleh cURL Project yang digunakan untuk melakukan url transfer melalui berbagai protokol, seperti HTTP, FTP dsb.</p>
+</blockquote>
+
+<p>Sampai saat ini proyek tersebut masih aktif. Ada dua produk yang dihasilkan  dari proyek ini, yaitu <strong>cURL</strong> dan <strong>libcurl</strong>. cURL merupakan tools berbasis command line sementara libcurl merupakan library yang digunakan oleh cURL. Keduanya ditulis menggunakan bahasa C. libcurl memiliki <em>binding</em> pada banyak bahasa pemrograman sehingga kita bisa memakainya dengan mudah pada bahasa yang kita gunakan, beberapa diantaranya adalah C/C++, php, python dan kawan-kawan.</p>
+
+<p>Kita cukupkan saja intro mengenai cURL dan libcurl. 
+Selanjutnya mari kita langsung bermain dengan script, melakukan HTTP request menggunakan libcurl pada php.</p>
+
+<pre><code>&lt;?php
+
+$url = 'http://example.com';
+
+$fields = [
+    'nama' =&gt; 'Joko',
+    'alamat' =&gt; 'Jalan Jenderal Soedirman 78, Purwokerto'
+];
+
+$agent = 'bukanChromeBukanFirefox';
+
+$timeout = 20; //detik
+
+$handle = curl_init();
+curl_setopt($handle,CURLOPT_URL, $url);
+
+//jika ingin menggunakan request bermethod POST
+curl_setopt($handle,CURLOPT_POST, 1);
+curl_setopt($handle,CURLOPT_POSTFIELDS, http_build_query($fields));
+//end POST
+
+curl_setopt($handle,CURLOPT_USERAGENT, $agent);
+curl_setopt($handle,CURLOPT_CONNECTTIMEOUT,$timeout);
+curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
+$data = curl_exec($handle);
+$httpcode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+curl_close($handle);
+
+echo $data; //berisi respon dari server
+
+?&gt;
+</code></pre>
+
+<p>mari kita urai satu demi satu.</p>
+
+<pre><code>$handle = curl_init();
+</code></pre>
+
+<p>Memulai sebuah sesi cURL.</p>
+
+<hr />
+
+<pre><code>curl_setopt($handle,CURLOPT_URL, $url);  
+</code></pre>
+
+<p>Mengatur URL tujuan request yang akan dibuat.</p>
+
+<hr />
+
+<pre><code>curl_setopt($handle,CURLOPT_POST, 1);
+</code></pre>
+
+<p>Memberitahu libcurl bahwa request yang akan dibuat adalah POST request.</p>
+
+<hr />
+
+<pre><code>curl_setopt($handle,CURLOPT_POSTFIELDS, http_build_query($fields));
+</code></pre>
+
+<p>Memberitahu libcurl tentang muatan data yang akan dikirim melalui POST request.<br />
+Penggunaan fungsi <code>http_build_query()</code> mengubah array pada <code>$fields</code> menjadi string dalam bentuk <strong><em>urlencoded</em></strong>.<br />
+Jika data yang dimuat berupa string berbentuk <strong>encodedurl</strong> maka request yang akan dibuat akan memiliki <code>Content-type: application/x-www-form-urlencoded</code> pada headernya seperti pada form kebanyakan.<br />
+Namun jika data berbentuk array, maka request akan memiliki <code>Content-type: multipart/form-data</code> pada headernya layaknya form yang digunakan untuk mengupload file.</p>
+
+<hr />
+
+<pre><code>curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
+</code></pre>
+
+<p>Mengatur agar method <code>curl_exec()</code> mengembalikan mengembalikan nilai berupa string respon dari server tujuan.<br />
+Jika opsi ini tidak ditulis atau bernilai selain 1 maka hasil / respon dari server tujuan akan langsung ter <strong><em>echo</em></strong> dan kita akan kesusahan untuk mengolahnya.</p>
+
+<hr />
+
+<pre><code>$data = curl_exec($handle);
+</code></pre>
+
+<p>Mengeksekusi request cURL dan memasukan respon kembalian kedalam variabel <code>$data</code></p>
+
+<hr />
+
+<p>dan yang terakhir adalah jangan lupa untuk selalu membebaskan resource yang kita pakai jika sudah selesai digunakan.</p>
+
+<pre><code>curl_close($handle);
+</code></pre>
+
+<hr />
+
+<p>Sekian, semoga bermanfaat.</p>
+
+<p><small>
+Referensi:</p>
+
+<ol>
+        <li><a href="https://en.wikipedia.org/wiki/CURL">Wikipedia</a></li>
+        <li><a href="php.net/manual/en/">PHP Doc</a>
+    </ol>
+
+<p></small></p>
 
         </div>
             </article>

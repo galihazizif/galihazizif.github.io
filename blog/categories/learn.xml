@@ -3,7 +3,7 @@
     <title><![CDATA[rempoah]]></title>
     <link href="/blog/categories/learn.xml" rel="self"/>
     <link href="/"/>
-    <updated>2017-07-01T13:29:10+07:00</updated>
+    <updated>2017-07-01T15:48:09+07:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -14,7 +14,7 @@
             <content type="html"><![CDATA[<h4 id="pernakahkah-mendengar-kata-markdown%3F">Pernakahkah mendengar kata markdown?</h4>
 
 <blockquote>
-  <p>Kayak pernah denger</p>
+  <p>Apakah markdown itu?</p>
 </blockquote>
 
 <p>Pada tahun 2004 markdown dibuat oleh John Gruber dan Aaron Swartz dengan tujuan agar menjadi bahasa markup plain-text yang mudah dalam penulisan dan mudah untuk dibaca.  <em>(disarikan dari <a href="https://wikipedia.org">Wikipedia</a>)</em></p>
@@ -140,8 +140,6 @@ ini teks <em>italic</em></p>
 <p><em>&#42;Penulisan <strong>Blockquotes</strong>&#42;</em></p>
 
 <pre><code>    &gt; ini adalah blockquotes,
-    Joko sudah sarapan
-        &gt;ooo ya sudah
 </code></pre>
 
 <hr />
@@ -149,10 +147,50 @@ ini teks <em>italic</em></p>
 <p><em>&#42;Hasil <strong>Blockquotes</strong>&#42;</em></p>
 
 <blockquote>
-  <p>ini adalah blockquotes,
-          Joko sudah sarapan
-  ooo ya sudah</p>
+  <p>ini adalah blockquotes,</p>
 </blockquote>
+
+<h3 id="%5C%3E%3E%3E-link-">&#62;>> Link &lt;&lt;&lt;</h3>
+
+<hr />
+
+<p><em>&#42;Penulisan <strong>Link</strong>&#42;</em></p>
+
+<pre><code>    [Nama Tujuan](www.example.com)
+    [rempoah](http://rempoah.com)
+</code></pre>
+
+<hr />
+
+<p><em>&#42;Hasil <strong>Link</strong>&#42;</em></p>
+
+<p><a href="www.example.com">Nama Tujuan</a><br />
+<a href="http://rempoah.com">rempoah</a></p>
+
+<hr />
+
+<h3 id="%5C%3E%3E%3E-gambar-">&#62;>> Gambar &lt;&lt;&lt;</h3>
+
+<hr />
+
+<p><em>&#42;Penulisan Tag <strong>Gambar</strong>&#42;</em></p>
+
+<p>Untuk memasukan gambar pada markdwon sebenarnya sangat mudah, tinggal menambahkan tanda seru seperti pada saat membuat <strong>Link</strong>.</p>
+
+<pre><code>![Logo Google](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png)
+</code></pre>
+
+<hr />
+
+<p><em>&#42;Hasil <strong>Gambar</strong>&#42;</em></p>
+
+<p><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png" alt="Logo Google" /></p>
+
+<hr />
+
+<hr />
+
+<p>Mudah mudahan bermanfaat, selamat mencoba.</p>
 ]]></content>
         </entry>
     </feed>
