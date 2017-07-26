@@ -3,7 +3,7 @@
     <title><![CDATA[rempoah]]></title>
     <link href="/blog/categories/learn.xml" rel="self"/>
     <link href="/"/>
-    <updated>2017-07-13T09:37:19+07:00</updated>
+    <updated>2017-07-26T13:38:52+07:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -20,6 +20,8 @@
 <p>Pada tahun 2004 markdown dibuat oleh John Gruber dan Aaron Swartz dengan tujuan agar menjadi bahasa markup plain-text yang mudah dalam penulisan dan mudah untuk dibaca.  <em>(disarikan dari <a href="https://wikipedia.org">Wikipedia</a>)</em></p>
 
 <p>Menurut sebagian orang, penggunaan markdown untuk menuangkan pikiran kedalam tulisan lebih memudahkan dibandingkan jika harus menggunakan <strong>WYSIWYG</strong> editor. Pen-formatan standar yang dibutuhkan dalam membuat tulisan sudah dicakup dalam markdown, sehingga tidak perlu untuk mengalihkan jari-jemari dari atas papan keyboard hanya untuk mengaplikasikan format tambahan pada teks yang kita tulis.</p>
+
+<!-- break -->
 
 <hr />
 

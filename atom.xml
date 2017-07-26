@@ -3,7 +3,7 @@
     <title><![CDATA[rempoah]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2017-07-13T09:37:19+07:00</updated>
+    <updated>2017-07-26T13:38:52+07:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -17,6 +17,8 @@
 <li><p>Algoritma kunci simetris, (shared key / kunci bersama / password bersama), digunakan kunci yang sama untuk melakukan enkripsi dan dekripsi. <em>(Contoh kasus: Jika joko mengirimkan pesan rahasia kepada tono, joko juga harus memastikan bahwa tono mengetahui kunci yang sama seperti yang digunakannya untuk mengenkripsi pesan)</em></p></li>
 <li><p>Algoritma kunci asimetris, atau dikenal juga dengan "public - private key",kunci asimetris merupakan pasangan antara public-key dan private-key. Dalam hal pengiriman pesan, public-key digunakan untuk melakukan enkripsi dan private-key digunakan untuk membuka pesan / dekripsi. <em>(Contoh kasus: Joko ingin mengirimkan pesan kepada tono, namun joko tidak bisa memberitahukan password kepada tono karena khawatir ketahuan, akhirnya joko melakukan enkripsi pesan dengan public-key milik tono yang dipublish di blog pribadi yang baru dibuat tono kemarin, hanya tono yang bisa membuka pesan rahasia yang dikirimkan joko, karena joko melakukan enkripsi pesan menggunakan public-key milik tono, kita ingat kembali public-key dan private-key merupakan pasangan, hanya tono-lah yang mempunyai private-key miliknya sendiri sehingga hanya dia yang bisa membuka pesan yang dienkripsi menggunakan public-key miliknya)</em></p></li>
 </ol>
+
+<!-- break -->
 
 <h3 id="kunci-simetris">Kunci Simetris</h3>
 
@@ -89,6 +91,8 @@ Berikut ini screenshot dari joko mengenai pesan selamat lebaran yang sudah kita 
 <p>Pada tahun 2004 markdown dibuat oleh John Gruber dan Aaron Swartz dengan tujuan agar menjadi bahasa markup plain-text yang mudah dalam penulisan dan mudah untuk dibaca.  <em>(disarikan dari <a href="https://wikipedia.org">Wikipedia</a>)</em></p>
 
 <p>Menurut sebagian orang, penggunaan markdown untuk menuangkan pikiran kedalam tulisan lebih memudahkan dibandingkan jika harus menggunakan <strong>WYSIWYG</strong> editor. Pen-formatan standar yang dibutuhkan dalam membuat tulisan sudah dicakup dalam markdown, sehingga tidak perlu untuk mengalihkan jari-jemari dari atas papan keyboard hanya untuk mengaplikasikan format tambahan pada teks yang kita tulis.</p>
+
+<!-- break -->
 
 <hr />
 
@@ -276,11 +280,11 @@ ini teks <em>italic</em></p>
 <p>Sampai saat ini proyek tersebut masih aktif. Ada dua produk yang dihasilkan  dari proyek ini, yaitu <strong>cURL</strong> dan <strong>libcurl</strong>. cURL merupakan tools berbasis command line sementara libcurl merupakan library yang digunakan oleh cURL. Keduanya ditulis menggunakan bahasa C. libcurl memiliki <em>binding</em> pada banyak bahasa pemrograman sehingga kita bisa memakainya dengan mudah pada bahasa yang kita gunakan, beberapa diantaranya adalah C/C++, php, python dan kawan-kawan.</p>
 
 <p>Kita cukupkan saja intro mengenai cURL dan libcurl. 
-Selanjutnya mari kita langsung bermain dengan script, melakukan HTTP request menggunakan libcurl pada php.</p>
+Selanjutnya mari kita langsung bermain dengan script, melakukan HTTP request menggunakan libcurl pada php. 
+<!-- break -->
+    &lt;?php</p>
 
-<pre><code>&lt;?php
-
-$url = 'http://example.com';
+<pre><code>$url = 'http://example.com';
 
 $fields = [
     'nama' =&gt; 'Joko',
