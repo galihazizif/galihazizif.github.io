@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc></loc>
-    <lastmod>2017-07-27</lastmod>
+    <lastmod>2017-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -21,6 +21,12 @@
     <url>
     <loc>/blog/2017/06/01/belajar-php-curl/</loc>
     <lastmod>2017-06-01T00:00:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+    <url>
+    <loc>/blog/2014/03/24/call-barring-password-blocked/</loc>
+    <lastmod>2014-03-24T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
