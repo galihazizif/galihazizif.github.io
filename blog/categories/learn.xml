@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[rempoah]]></title>
-    <link href="/blog/categories/learn.xml" rel="self"/>
-    <link href="/"/>
-    <updated>2017-08-17T15:30:46+07:00</updated>
-    <id>/</id>
+    <link href="https://rempoah.com/blog/categories/learn.xml" rel="self"/>
+    <link href="https://rempoah.com/"/>
+    <updated>2017-08-17T15:32:45+07:00</updated>
+    <id>https://rempoah.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Belajar menggunakan markdown]]></title>
-            <link href="/blog/2017/06/29/cobain-yuk/"/>
+            <link href="https://rempoah.com/blog/2017/06/29/cobain-yuk/"/>
             <updated>2017-06-29T00:00:00+07:00</updated>
-            <id>/blog/2017/06/29/cobain-yuk/</id>
+            <id>https://rempoah.com/blog/2017/06/29/cobain-yuk/</id>
             <content type="html"><![CDATA[<h4 id="pernakahkah-mendengar-kata-markdown%3F">Pernakahkah mendengar kata markdown?</h4>
 
 <blockquote>
