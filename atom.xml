@@ -3,9 +3,31 @@
     <title><![CDATA[rempoah]]></title>
     <link href="https://rempoah.com/atom.xml" rel="self"/>
     <link href="https://rempoah.com/"/>
-    <updated>2017-08-17T15:32:45+07:00</updated>
+    <updated>2017-11-07T15:10:19+07:00</updated>
     <id>https://rempoah.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Mengubah login url pada Yii2 Framework]]></title>
+            <link href="https://rempoah.com/blog/2017/11/02/Mengubah-login-url-pada-yii-2/"/>
+            <updated>2017-11-02T00:00:00+07:00</updated>
+            <id>https://rempoah.com/blog/2017/11/02/Mengubah-login-url-pada-yii-2/</id>
+            <content type="html"><![CDATA[<h2 id="cara-mengubah-login-url-pada-yii2-framework">Cara mengubah login url pada Yii2 Framework</h2>
+
+<p>Assalamu'laykum warakhmatullah, kali ini saya ingin menulis tentang cara mengubah url login pada yii2. Bagi para pengguna framework yii2 tentu sudah tidak asing lagi dengan fasilitas otentikasi user yang sudah disediakan secara built-in pada yii2.</p>
+
+<!-- break -->
+
+<p>Secara default, login url berada pada controller <code>Site</code> dan action <code>login</code>, namun ada kalanya kita harus mengganti halaman login tidak pada  <code>Site/login</code>.</p>
+
+<p>Untuk mengganti login url, kita cukup meng-override property <code>loginUrl</code> pada component <code>user</code> yang ada pada file konfigurasi. Jika pada file konfigurasi aplikasi Yii2 anda tidak terdapat component <code>user</code> maka perlu didefinisikan terlebih dahulu.</p>
+
+<script src="https://gist.github.com/galihazizif/2303668b26c4eae4eae0d136bcb613cd.js"></script>
+
+<p>Setelah property <code>loginUrl</code> pada component <code>user</code> di override seperti konfigurasi diatas, halaman login akan diredirect ke url login yang baru.</p>
+
+<p>Semoga bermanfaat.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Tarif khusus KA Komersil di sekitar Purwokerto]]></title>
             <link href="https://rempoah.com/blog/2017/08/15/tarif-khusus-ka-komersial-daop-5/"/>
@@ -494,7 +516,7 @@ Referensi:</p>
             <entry>
             <title type="html"><![CDATA[Call barring password blocked - Indosat]]></title>
             <link href="https://rempoah.com/blog/2014/03/24/call-barring-password-blocked/"/>
-            <updated>2014-03-24T00:00:00+08:00</updated>
+            <updated>2014-03-24T00:00:00+07:00</updated>
             <id>https://rempoah.com/blog/2014/03/24/call-barring-password-blocked/</id>
             <content type="html"><![CDATA[<p><img src="/images/posts/indosat_logo.jpg" alt="logo indosat" /></p>
 
