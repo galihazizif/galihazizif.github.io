@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Membuat pesan terenkripsi menggunakan GnuPG (gpg) &mdash; rempoah</title>
+        <title>Membuat aplikasi buku tamu menggunakan PHP dan MySQL &mdash; rempoah</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,81 +78,132 @@
                 <div class="col-md-8">
                         <article>
         <header>
-            <h2><a href="/blog/2017/06/29/membuat-pesan-terenkripsi-menggunakan-gpg/">Membuat pesan terenkripsi menggunakan GnuPG (gpg)</a></h2>
+            <h2><a href="/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/">Membuat aplikasi buku tamu menggunakan PHP dan MySQL</a></h2>
         </header>
         <div>
-            <p>Assalamu'laykum, kali ini kita akan belajar membuat pesan terenkripsi menggunakan terminal/bash pada linux. Pada umumnya terdapat 2 jenis cipher (cara untuk meng-enkripsi dan dekripsi) jika dilihat dari sama atau tidaknya kunci (key) untuk melakukan enkripsi dan dekripsi (dekripsi ya.., bukan deskripsi), yaitu kunci simetris dan kunci asimetris.</p>
+            <p>Assalamu'laykum, kali ini kita akan belajar membuat aplikasi <strong>buku tamu</strong> sederhana menggunakan PHP dan MySQL. Artikel ini ditujukan untuk pemula yang ingin belajar membuat aplikasi menggunakan PHP dan MySQL.</p>
 
-<ol>
-<li><p>Algoritma kunci simetris, (shared key / kunci bersama / password bersama), digunakan kunci yang sama untuk melakukan enkripsi dan dekripsi. <em>(Contoh kasus: Jika joko mengirimkan pesan rahasia kepada tono, joko juga harus memastikan bahwa tono mengetahui kunci yang sama seperti yang digunakannya untuk mengenkripsi pesan)</em></p></li>
-<li><p>Algoritma kunci asimetris, atau dikenal juga dengan "public - private key",kunci asimetris merupakan pasangan antara public-key dan private-key. Dalam hal pengiriman pesan, public-key digunakan untuk melakukan enkripsi dan private-key digunakan untuk membuka pesan / dekripsi. <em>(Contoh kasus: Joko ingin mengirimkan pesan kepada tono, namun joko tidak bisa memberitahukan password kepada tono karena khawatir ketahuan, akhirnya joko melakukan enkripsi pesan dengan public-key milik tono yang dipublish di blog pribadi yang baru dibuat tono kemarin, hanya tono yang bisa membuka pesan rahasia yang dikirimkan joko, karena joko melakukan enkripsi pesan menggunakan public-key milik tono, kita ingat kembali public-key dan private-key merupakan pasangan, hanya tono-lah yang mempunyai private-key miliknya sendiri sehingga hanya dia yang bisa membuka pesan yang dienkripsi menggunakan public-key miliknya)</em></p></li>
-</ol>
+<p>Sebelum kita mulai membuat aplikasi buku tamu, pastikan <em>environment</em>/kumpulan software pendukung yang diperlukan sudah anda miliki. Pendukung yang dibutuhkan antara lain:</p>
 
 <!-- break -->
 
-<h3 id="kunci-simetris">Kunci Simetris</h3>
+<ol>
+<li>Text Editor (disini saya menggunakan Sublime Text)</li>
+<li>WebServer yang sudah dikonfigurasi dengan PHP (disini saya menggunakan Apache2 WebServer)</li>
+<li>Database (DBMS MySQL).</li>
+</ol>
 
-<p>Selanjutnya kita akan mulai mencoba melakukan enkripsi pesan yang ada didalam file "pesan.txt" menggunakan kunci simetris / password bersama</p>
+<p>Sistem Operasi komputer yang saya gunakan adalah Ubuntu Linux, tutorial untuk menginstall environment/software pendukung jika anda menggunakan Ubuntu Linux dapat dilihat pada link berikut ini.</p>
 
-<p><img src="/images/posts/ad62435a4290eec6f6e26.png" alt="enkripsi shared key" title="" /></p>
+<p><a href="https://mragus.com/cara-menginstall-apache-mysql-dan-php-lamp-di-ubuntu-16-04/">Tutorial menginstall LAMPP pada Ubuntu</a></p>
 
-<p><img src="/images/posts/a393d62ce70c6bf4871a1.png" alt="terbentuk file terenkripsi" /></p>
+<p>Jika anda menggunakan Sistem Operasi MS Windows, silahkan gunakan aplikasi XAMPP untuk memudahkan instalasi dan konfigurasi.</p>
 
-<p>Sampai pada langkah ini kita sudah bisa melakukan enkripsi file menggunakan enkripsi simetris.
-Selanjutnya, kita akan mencoba men-decrypt file "pesan.txt.gpg" yang sudah kita lakukan enkripsi pada langkah sebelumnya.</p>
+<p><a href="https://www.apachefriends.org/index.html">Download XAMPP untuk Windows</a></p>
 
-<p><img src="/images/posts/2b1077c0547aa2f3bb231.png" alt="Dekripsi shared key" />
-<img src="/images/posts/bf2fa6abd5b6140210e84.png" alt="Dekripsi shared key" /></p>
+<hr />
 
-<h3 id="kunci-asimetris">Kunci Asimetris</h3>
+<h4 id="persiapan">Persiapan</h4>
 
-<p>Setelah kita berhasil melakukan enkripsi menggunakan kunci simetris, selanjutnya kita akan mencoba mengenkrisi pesan menggunakan kunci asimetris. Pada contoh kali ini, kita akan mencoba mengirimkan pesan rahasia kepada joko, joko telah mempublikasikan pgp public-key pada blog pribadinya.</p>
+<p>Pada Bagian ini, diasumsikan bahwa software pendukung sudah diinstall pada komputer anda dan script PHP sudah dapat berjalan dengan baik.</p>
 
-<blockquote>
-  <p>public-key milik joko, salin seluruh text dari ----BEGIN PGP .... sampa dengan ----- END PGP ..., kemudian simpan pada sebuah file baru. joko_public.key</p>
-</blockquote>
+<p>Sebagai gambaran, berikut struktur direktori / folder aplikasi buku tamu yang akan kita buat.</p>
 
-<p><img src="/images/posts/876b9b70228904a51f30d.png" alt="Public key joko" /></p>
+<p><img src="/images/posts/s_folder.jpg" alt="Struktur direktori / folder" /></p>
 
-<p>Impor public-key milik joko yang tadi sudah kita simpan didalam file joko_public.key</p>
+<h4 id="database">Database</h4>
 
-<p><img src="/images/posts/3bf8281dcb1fa38a65c02.png" alt="impor public key joko" /></p>
+<p>Sebelum melangkah lebih jauh, kita perlu untuk mendefinisikan database dari aplikasi yang akan kita buat.</p>
 
-<p>Selanjutnya akan muncul respon bahwa public-key milik joko telah berhasil di-impor.</p>
+<p>Database yang akan kita buat bernama <code>bukutamu</code>. Masuk kedalam SQL console melalui command prompt atau PHPMyAdmin atau tools lain yang ada dikomputer anda, kemudian buat database baru bernama <code>bukutamu</code> seperti pada contoh berikut ini.
+<script src="https://gist.github.com/galihazizif/52ce101c2bd2faa57c5dfaadff0d0257.js"></script></p>
 
-<p><img src="/images/posts/d5c538cd41f5efff84900.png" alt="telah diimport" /></p>
+<p>Database kita terdiri 2 tabel. Tabel <code>daftar_tamu</code> yang digunakan untuk menyimpan data tamu dan Tabel <code>admin</code> yang nantinya digunakan untuk menyimpan data user. Pada kesempatan kali ini kita hanya akan menggunakan tabel <code>daftar_tamu</code>. Tabel <code>daftar_tamu</code> terdiri dari beberapa field:</p>
 
-<p>Untuk melihat key siapa saja yang sudah tersimpan kita menggunakan opsi --list-key pada gpg</p>
+<p>a. <code>id</code> (int) (Primary Key) (Auto Increment)<br />
+b. <code>nama</code> (varchar(100))<br />
+c. <code>alamat</code> (varchar(100))<br />
+d. <code>email</code> (varchar(100))</p>
 
-<p><img src="/images/posts/cd84136144ffd8160e407.png" alt="list keys" /></p>
+<p>Berikut ini SQL query untuk membuat tabel <code>daftar_tamu</code>.
+<script src="https://gist.github.com/galihazizif/26292d2f0f7f92449df57a704874765a.js"></script></p>
 
-<blockquote>
-  <p>Mengirim pesan dengan asymmetric key</p>
-  
-  <p>Sekarang kita akan melakukan enkripsi terhadap file pesan.txt menggunakan public-key milik joko</p>
-</blockquote>
+<p>Pada tahap ini, database <code>bukutamu</code> beserta tabel <code>daftar_tamu</code> didalamnya siap digunakan.</p>
 
-<p><img src="/images/posts/c1c46848744f21f8bae67.png" alt="asymmetric encrypt" /></p>
+<h4 id="mulai-bekerja">Mulai Bekerja</h4>
 
-<p>akan muncul peringatan dari gpg yang memberitahukan bahwa gpg tidak menjamin public-key tersebut benar-benar milik joko yang kita maksud, namun tidak masalah, karena kita mendapatkan public-key tersebut dari joko kita, bukan joko yang lain.<br />
-opsi --armor pada gambar diatas diberikan agar file keluaran dari gpg berbentuk ascii, bukan binary,, karena file binary akan tampak jelek jika dibuka pada text editor.. Namun bila diinginkan hasil berupa binary file, hapus opsi --armor<br />
-Secara default, jika opsi --armor diberikan akan menghasilkan file terenkripsi dengan tambahan extensi asc, pada contoh ini "pesan.txt.asc"</p>
+<p>Target kita pada kali ini adalah untuk membuat 2 halaman.</p>
 
-<p><img src="/images/posts/c7fa7f3dbd16cc4509f0f.png" alt="encrypted" /></p>
+<ol>
+<li><strong>Home Page / Beranda</strong>, untuk menampilkan daftar tamu yang telah mengisi buku tamu.</li>
+<li><strong>Form</strong>, tempat tamu menuliskan kunjungannya.</li>
+</ol>
 
-<p>Pesan ucapan selamat lebaran telah terenkripsi menggunakan public-key milik joko, kita bisa mengirimkan file tersebut "pesan.txt.asc" melalui email atau media lainnya, orang lain yang tidak memilki private-key joko akan sangat sulit (kemungkinannya sangat kecil) untuk bisa melakukan dekripsi.<br />
-Berikut ini screenshot dari joko mengenai pesan selamat lebaran yang sudah kita kirimkan untuknya, pesan didekripsi menggunakan applikasi openKeyChain pada smartphone android milik joko.<br />
-<img src="/images/posts/54c43ecc9c14e7e690c7f.jpg" alt="from joko" /></p>
+<p>Pertama-tama, letakkan folder <code>bukutamu</code> pada webroot webserver anda, jika anda menggunakan XAMPP biasanya webroot folder secara default adalah folder <code>htdocs</code>.</p>
 
-<p>Sekian, semoga bermanfaat.</p>
+<p>Kita akan membuat sebuah file bernama <code>config.php</code> didalam folder <code>bukutamu</code>, file ini kita gunakan untuk menyimpan konfigurasi <em>username</em>, <em>password</em> database. Selain itu, untuk mempermudah, kita juga akan membuat fungsi untuk melakukan redirect halaman web pada file ini. Berikut isi dari <code>config.php</code></p>
+
+<script src="https://gist.github.com/galihazizif/d26d49e8f2f60b52dbe4c37dc197aab2.js"></script>
+
+<p>Selanjutnya, kita akan membuat file <code>index.php</code> sebagai <em>initial script</em> untuk aplikasi kita. Posisi file ini sejajar dengan file <code>config.php</code> didalam folder <code>bukutamu</code>. Berikut ini isi dari file <code>index.php</code></p>
+
+<script src="https://gist.github.com/galihazizif/e0d9a92407eff6acc0edfadc5a33eb1d.js"></script>
+
+<p>Setelah file <code>index.php</code> dibuat, kita akan mencoba menjalankan file tersebut dari web browser. Masukan url <code>http://localhost/bukutamu/</code> pada browser dan jalankan.</p>
+
+<p><img src="/images/posts/bukutamu_1.png" alt="Terjadi Error" /></p>
+
+<p>Akan terjadi pesan <strong>Warning</strong> seperti pada gambar diatas. Error ini terjadi karena beberapa file yang di include pada <code>index.php</code> tidak tersedia.</p>
+
+<p>Selanjutnya kita akan mencoba membenahi error tersebut dengan melengkapi file yang kurang (<code>layout/footer.php</code>,<code>layout/header.php</code>,<code>page/home.php</code>,<code>page/form.php</code>)</p>
+
+<p>Agar tidak lupa dan lebih jelas, kita ingat-ingat lagi strukutur direktori dan file pada aplikasi yang akan kita buat.</p>
+
+<pre><code>Berikut ini susunan file dan folder pada aplikasi bukutamu.
++bukutamu
+    +layout
+        -header.php
+        -footer.php
+    +page
+        -home.php
+        -form.php
+    -index.php
+    -config.php
+</code></pre>
+
+<p>Kita buat terlebih dahulu file <code>header.php</code> yang digunakan untuk meletakkan Judul umum aplikasi bukutamu.</p>
+
+<script src="https://gist.github.com/galihazizif/e26e6664165ce08bd258b4fc504148a6.js"></script>
+
+<p>Jika file <code>header.php</code> sudah kita buat,  sekarang kita buat file <code>footer.php</code> untuk menuliskan footer.</p>
+
+<script src="https://gist.github.com/galihazizif/181bfb8055c40e60c9d8de6bb9ebf2c8.js"></script>
+
+<p>Header dan footer sudah kita buat, selanjutnya tinggal file <code>home.php</code> yang digunakan untuk menampilkan daftar tamu yang telah mengisi buku tamu.</p>
+
+<script src="https://gist.github.com/galihazizif/ef19961ac08f5a93c13a1209c376347c.js"></script>
+
+<p>Setelah file <code>home.php</code> dibuat, kita akan membuat file <code>form.php</code> yang digunakan untuk menuliskan / menyimpan data kunjungan tamu kedalam database.</p>
+
+<script src="https://gist.github.com/galihazizif/b00205307736a832bd9e3002acfa4349.js"></script>
+
+<p>Apabila file <code>form.php</code> sudah kita buat aplikasi kita telah selesai. Sekarang saatnya untuk menjalankan aplikasi buku tamu sederhana yang sudah dibuat.</p>
+
+<h3 id="pembahasan-khusus">Pembahasan Khusus</h3>
+
+<p>Pada bagian ini kita akan sedikit membahas tentang perintah perintah yang digunakan pada file <code>index.php</code>,<code>home.php</code> dan <code>form.php</code></p>
+
+<p>.... rung rampung...</p>
 
         </div>
-                
+                            <p class="tags">
+            Tags:
+                        <a href="/blog/tags/Membuat%20Buku%20Wannabe">Membuat Buku Wannabe</a>                        </p>
+        
                 <hr>
         <div class="row">
             <div class="col-md-12">
-                                        <a class="next btn btn-default btn-block" href="/blog/2017/08/06/ka-singasari-menggunakan-rangkaian-premium/" title="KA Singasari menggunakan rangkaian premium 2017">&raquo; KA Singasari menggunakan rangkaian premium 2017</a>
-                                                        <a class="next btn btn-default btn-block" href="/blog/2017/06/29/cobain-yuk/" title="Belajar menggunakan markdown">&laquo; Belajar menggunakan markdown</a>
+                                                        <a class="next btn btn-default btn-block" href="/blog/2017/11/02/Mengubah-login-url-pada-yii-2/" title="Mengubah login url pada Yii2 Framework">&laquo; Mengubah login url pada Yii2 Framework</a>
                             </div>
         </div>
             <nav class="article">
@@ -169,7 +220,7 @@ Berikut ini screenshot dari joko mengenai pesan selamat lebaran yang sudah kita 
     var disqus_shortname = 'blog-rempoah-com'; // required: replace example with your forum shortname
 
 
-    
+    var disqus_identifier = '2017110701'; 
     
     
     
