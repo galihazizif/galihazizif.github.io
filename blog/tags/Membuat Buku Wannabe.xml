@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[rempoah]]></title>
-    <link href="https://rempoah.com/blog/tags/Membuat Buku Wannabe.xml" rel="self"/>
-    <link href="https://rempoah.com/"/>
-    <updated>2017-11-08T19:21:34+07:00</updated>
-    <id>https://rempoah.com/</id>
+    <link href="/blog/tags/Membuat Buku Wannabe.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2017-11-09T06:38:26+07:00</updated>
+    <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Membuat aplikasi buku tamu menggunakan PHP dan MySQL]]></title>
-            <link href="https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/"/>
+            <link href="/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/"/>
             <updated>2017-11-07T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</id>
-            <content type="html"><![CDATA[<p>Assalamu'laykum, kali ini kita akan belajar membuat aplikasi <strong>buku tamu</strong> sederhana menggunakan PHP dan MySQL. Artikel ini ditujukan untuk pemula yang ingin belajar membuat aplikasi menggunakan PHP dan MySQL.</p>
+            <id>/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</id>
+            <content type="html"><![CDATA[<p>Assalamu'laykum, kali ini kita akan belajar Membuat aplikasi buku tamu menggunakan PHP dan MySQL. Artikel ini ditujukan untuk pemula yang ingin belajar membuat aplikasi menggunakan PHP dan MySQL.</p>
 
 <p>Sebelum kita mulai membuat aplikasi buku tamu, pastikan <em>environment</em>/kumpulan software pendukung yang diperlukan sudah anda miliki. Pendukung yang dibutuhkan antara lain:</p>
 
@@ -123,7 +123,118 @@ d. <code>email</code> (varchar(100))</p>
 
 <p>Pada bagian ini kita akan sedikit membahas tentang perintah perintah yang digunakan pada file <code>index.php</code>,<code>home.php</code> dan <code>form.php</code></p>
 
-<p>.... rung rampung...</p>
+<hr />
+
+<p>Pertama-tama adalah file <code>index.php</code></p>
+
+<pre><code>include __DIR__.'/config.php';
+
+$page = !empty($_GET['page'])?$_GET['page']:null;
+</code></pre>
+
+<p>Ketika file <code>index.php</code> dieksekusi, file <code>config.php</code> akan dibaca dan diincludekan, sehingga <em>variabel</em> dan <em>method</em> yang ada dalam file <code>config.php</code> dapat digunakan pada <code>index.php</code>.</p>
+
+<p>Kemudian baris selanjutnya adalah menginisiasi variabel <code>$page</code> dengan parameter dari URL. Jika tidak terdapat parameter <code>page</code> pada URL maka variabel <code>$page</code> akan diisi dengan nilai <code>null</code>.</p>
+
+<p>Selanjutnya menuju ke block script berikutnya.</p>
+
+<pre><code>try{
+
+    /*Men-include file header*/
+    include __DIR__.'/layout/header.php';   
+
+    /*membuat kondisi halaman yang ditampilkan berdasarkan parameter page*/
+    switch ($page) {
+        case 'home':
+                include __DIR__.'/page/home.php';
+            break;
+        case 'form':
+                include __DIR__.'/page/form.php';
+            break;
+
+        /*jika parameter page bukan 'home' atau 'form' atau tidak ada maka akan ditampilkan homepage */
+        default:
+                include __DIR__.'/page/home.php';
+            break;
+    }
+
+    /*Men-include file footer*/
+    include __DIR__.'/layout/footer.php';
+
+}catch(\Exception $e){
+    /*menampilkan error message jika terjadi error*/
+    echo $e-&gt;getMessage();
+}
+</code></pre>
+
+<p>file <code>index.php</code> diatas cukup mudah untuk dimengerti. Selanjutnya adalah file  <code>home.php</code>. Kita akan mulai menguraikan file <code>home.php</code> sedikit demi sedikit.</p>
+
+<pre><code>    //home.php
+    $pdo = new PDO($dbConfig['dsn'],$dbConfig['username'],$dbConfig['password']);
+</code></pre>
+
+<p>Potongan kode diatas merupakan proses pembuatan object PDO, PDO merupakan kependekan dari PHP Data Object, parameter yang digunakan adalah variabel yang didefinisikan didalam file <code>config.php</code></p>
+
+<p>Setelah object PDO dibuat, blok kode berikutnya adalah mengeksekusi query untuk mengambil data dari tabel <code>daftar_tamu</code></p>
+
+<pre><code>//home.php (lanjutan)
+$sql = " SELECT * FROM daftar_tamu";
+        $pds = $pdo-&gt;query($sql);
+        $data = $pds-&gt;fetchAll();
+</code></pre>
+
+<p>Object <code>$pdo</code> memiliki fungsi yang bernama <code>query()</code>, fungsi tersebut akan mengembalikan sebuah object yang dinamakan PDO Statement. Data diambil dari object PDOStatement dengan memanggil fungsi <code>fetchAll()</code> dan dimasukkan kedalam variabel <code>$data</code>.</p>
+
+<p>Setelah data tamu dimasukan kedalam variabel <code>$data</code>, tahap selanjutnya adalah menguraikan data tersebut yang berbentuk array kedalam tampilan.</p>
+
+<pre><code>&lt;?php if(count($data) &gt; 0): ?&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;ID&lt;/td&gt;
+            &lt;td&gt;Nama&lt;/td&gt;
+            &lt;td&gt;Alamat&lt;/td&gt;
+            &lt;td&gt;Email&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;?php foreach($data as $tamu): ?&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;?=$tamu['id'] ?&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;?=$tamu['nama'] ?&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;?=$tamu['alamat'] ?&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;?=$tamu['email'] ?&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;?php endforeach; ?&gt;
+    &lt;/table&gt;
+&lt;?php else: ?&gt;
+    Belum ada tamu
+&lt;?php endif; ?&gt;
+</code></pre>
+
+<hr />
+
+<p>Selanjutnya adalah pembahasan tentang file <code>form.php</code>.Terdapat kesamaan antara file ini dengan file <code>home.php</code>. Perbedaanya ada pada query yang dieksekusi. Jika file <code>home.php</code> digunakan untuk mengambil data, file <code>form.php</code> digunakan untuk memasukan data kunjungan yang diinputkan melalui form kedalam tabel <code>daftar_tamu</code>.</p>
+
+<pre><code>$sql = " INSERT INTO daftar_tamu(";
+        $sql.= " nama,alamat,email)";
+        $sql.= " VALUES (";
+        $sql.= " :nama,:alamat,:email)";
+
+        $pds = $pdo-&gt;prepare($sql);
+
+        $pds-&gt;bindValue(':nama',$_POST['nama']);
+        $pds-&gt;bindValue(':alamat',$_POST['alamat']);
+        $pds-&gt;bindValue(':email',$_POST['email']);
+        $pds-&gt;execute();
+
+
+        Helper::redirect('index.php');
+</code></pre>
+
+<p>Variabel <code>$sql</code> berisi string SQL yang akan dieksekusi, didalam SQL terdapat placeholder <code>:nama,:alamat,:email</code>, placheloder tersebut akan diisi dengan isian dari form yang diniputkan oleh tamu. Isian dari form diambil menggunakan variabel SuperGlobal <code>$_POST</code></p>
+
+<p>Demikian pembahasan khusus secara singkat terhadap potongan-potongan perintah yang digunakan dalam aplikasi buku tamu sederhana ini.</p>
+
+<p>Semoga Bermanfaat,</p>
 ]]></content>
         </entry>
     </feed>
