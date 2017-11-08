@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[rempoah]]></title>
-    <link href="/blog/tags/Membuat Buku Wannabe.xml" rel="self"/>
-    <link href="/"/>
-    <updated>2017-11-09T06:38:26+07:00</updated>
-    <id>/</id>
+    <link href="https://rempoah.com/blog/tags/Membuat Buku Wannabe.xml" rel="self"/>
+    <link href="https://rempoah.com/"/>
+    <updated>2017-11-09T06:38:41+07:00</updated>
+    <id>https://rempoah.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Membuat aplikasi buku tamu menggunakan PHP dan MySQL]]></title>
-            <link href="/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/"/>
+            <link href="https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/"/>
             <updated>2017-11-07T00:00:00+07:00</updated>
-            <id>/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</id>
+            <id>https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</id>
             <content type="html"><![CDATA[<p>Assalamu'laykum, kali ini kita akan belajar Membuat aplikasi buku tamu menggunakan PHP dan MySQL. Artikel ini ditujukan untuk pemula yang ingin belajar membuat aplikasi menggunakan PHP dan MySQL.</p>
 
 <p>Sebelum kita mulai membuat aplikasi buku tamu, pastikan <em>environment</em>/kumpulan software pendukung yang diperlukan sudah anda miliki. Pendukung yang dibutuhkan antara lain:</p>
