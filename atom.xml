@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[rempoah]]></title>
-    <link href="https://rempoah.com/atom.xml" rel="self"/>
-    <link href="https://rempoah.com/"/>
-    <updated>2017-11-09T06:53:34+07:00</updated>
-    <id>https://rempoah.com/</id>
+    <link href="/atom.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2017-11-09T08:23:43+07:00</updated>
+    <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Membuat aplikasi buku tamu menggunakan PHP dan MySQL]]></title>
-            <link href="https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/"/>
+            <link href="/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/"/>
             <updated>2017-11-07T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</id>
+            <id>/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</id>
             <content type="html"><![CDATA[<p>Assalamu'laykum, kali ini kita akan belajar Membuat aplikasi buku tamu menggunakan PHP dan MySQL. Artikel ini ditujukan untuk pemula yang ingin belajar membuat aplikasi menggunakan PHP dan MySQL.</p>
 
 <p>Sebelum kita mulai membuat aplikasi buku tamu, pastikan <em>environment</em>/kumpulan software pendukung yang diperlukan sudah anda miliki. Pendukung yang dibutuhkan antara lain:</p>
@@ -239,9 +239,9 @@ $sql = " SELECT * FROM daftar_tamu";
         </entry>
             <entry>
             <title type="html"><![CDATA[Mengubah login url pada Yii2 Framework]]></title>
-            <link href="https://rempoah.com/blog/2017/11/02/Mengubah-login-url-pada-yii-2/"/>
+            <link href="/blog/2017/11/02/Mengubah-login-url-pada-yii-2/"/>
             <updated>2017-11-02T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/11/02/Mengubah-login-url-pada-yii-2/</id>
+            <id>/blog/2017/11/02/Mengubah-login-url-pada-yii-2/</id>
             <content type="html"><![CDATA[<h2 id="cara-mengubah-login-url-pada-yii2-framework">Cara mengubah login url pada Yii2 Framework</h2>
 
 <p>Assalamu'laykum warakhmatullah, kali ini saya ingin menulis tentang cara mengubah url login pada yii2. Bagi para pengguna framework yii2 tentu sudah tidak asing lagi dengan fasilitas otentikasi user yang sudah disediakan secara built-in pada yii2.</p>
@@ -261,9 +261,9 @@ $sql = " SELECT * FROM daftar_tamu";
         </entry>
             <entry>
             <title type="html"><![CDATA[Tarif khusus KA Komersil di sekitar Purwokerto]]></title>
-            <link href="https://rempoah.com/blog/2017/08/15/tarif-khusus-ka-komersial-daop-5/"/>
+            <link href="/blog/2017/08/15/tarif-khusus-ka-komersial-daop-5/"/>
             <updated>2017-08-15T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/08/15/tarif-khusus-ka-komersial-daop-5/</id>
+            <id>/blog/2017/08/15/tarif-khusus-ka-komersial-daop-5/</id>
             <content type="html"><![CDATA[<p>Kali ini saya akan memberikan informasi yang mungkin bermanfaat bagi anda yang sering bepergian menggunakan kereta api dari / ke Purwokerto menuju Yogyakarta, Kutoarjo, Cirebon atau sebaliknya.</p>
 
 <!-- break -->
@@ -315,9 +315,9 @@ Pemesanan tiket khusus ini hanya dapat dipesan langsung pada loket stasiun dalam
         </entry>
             <entry>
             <title type="html"><![CDATA[KA Singasari menggunakan rangkaian premium 2017]]></title>
-            <link href="https://rempoah.com/blog/2017/08/06/ka-singasari-menggunakan-rangkaian-premium/"/>
+            <link href="/blog/2017/08/06/ka-singasari-menggunakan-rangkaian-premium/"/>
             <updated>2017-08-06T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/08/06/ka-singasari-menggunakan-rangkaian-premium/</id>
+            <id>/blog/2017/08/06/ka-singasari-menggunakan-rangkaian-premium/</id>
             <content type="html"><![CDATA[<p>Halo pembaca yang budiman, hari ahad kemarin tanggal 6 Agustus 2017 saya berangkat dari stasiun Purwokerto menuju stasiun Pasar Senen menggunakan kereta api.
 Kereta yang saya gunakan adalah KA Singasari, KA yang sebelumnya bernama Krakatau. Tepat pukul 16.21 WIB dengan diiringi lagu khas  <strong>di tepi sungai Serayu</strong> KA Singasari masuk ke stasiun Purwokerto.</p>
 
@@ -368,17 +368,23 @@ namun berdasarkan pengalaman yang saya rasakan, tempat duduk di kereta ini cukup
 
 <p>Beberapa waktu yang lalu saya kembali menggunakan KA Singasari. Saat ini KA Singasari menggunakan 2 jenis kereta yang berbeda. 1 Keberangkatan menggunakan K3 Premium dan keberangkatan yang lain menggunakan K3 Ekonomi AC. Setelah saya amati, Kereta premium KA Singasari berangkat dari arah timur pada tanggal 3 September 2017, sehingga pada tanggal 4 September Kereta yang berangkat dari arah timur pasti bukan KA Premium. Jadi bisa anda hitung sendiri dengan kalender jika anda ingin menggunakan KA Singasari versi Premium.</p>
 
-<p>List Keberangkatan KA Singasari versi Premium dari arah Timur / Blitar.
-3 Sep 17, 5 Sep 17, 7 Sep 17, 9 Sep 17 dan seterusnya. Selamat menghitung.</p>
+<p>List Keberangkatan KA Singasari versi Premium dari arah Timur / Blitar.</p>
+
+<p>+3 Sep 17<br />
++5 Sep 17<br />
++7 Sep 17<br />
++9 Sep 17 dan seterusnya.</p>
+
+<p>Selamat menghitung.</p>
 
 <p>Semoga kedepannya (kita harap dalam waktu dekat) seluruh rangkaian kereta ekonomi jarak jauh diganti menggunakan K3 2017 / Premium. Aamiin.</p>
 ]]></content>
         </entry>
             <entry>
             <title type="html"><![CDATA[Membuat pesan terenkripsi menggunakan GnuPG (gpg)]]></title>
-            <link href="https://rempoah.com/blog/2017/06/29/membuat-pesan-terenkripsi-menggunakan-gpg/"/>
+            <link href="/blog/2017/06/29/membuat-pesan-terenkripsi-menggunakan-gpg/"/>
             <updated>2017-06-29T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/06/29/membuat-pesan-terenkripsi-menggunakan-gpg/</id>
+            <id>/blog/2017/06/29/membuat-pesan-terenkripsi-menggunakan-gpg/</id>
             <content type="html"><![CDATA[<p>Assalamu'laykum, kali ini kita akan belajar membuat pesan terenkripsi menggunakan terminal/bash pada linux. Pada umumnya terdapat 2 jenis cipher (cara untuk meng-enkripsi dan dekripsi) jika dilihat dari sama atau tidaknya kunci (key) untuk melakukan enkripsi dan dekripsi (dekripsi ya.., bukan deskripsi), yaitu kunci simetris dan kunci asimetris.</p>
 
 <ol>
@@ -447,9 +453,9 @@ Berikut ini screenshot dari joko mengenai pesan selamat lebaran yang sudah kita 
         </entry>
             <entry>
             <title type="html"><![CDATA[Belajar menggunakan markdown]]></title>
-            <link href="https://rempoah.com/blog/2017/06/29/cobain-yuk/"/>
+            <link href="/blog/2017/06/29/cobain-yuk/"/>
             <updated>2017-06-29T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/06/29/cobain-yuk/</id>
+            <id>/blog/2017/06/29/cobain-yuk/</id>
             <content type="html"><![CDATA[<h4 id="pernakahkah-mendengar-kata-markdown%3F">Pernakahkah mendengar kata markdown?</h4>
 
 <blockquote>
@@ -636,9 +642,9 @@ ini teks <em>italic</em></p>
         </entry>
             <entry>
             <title type="html"><![CDATA[belajar menggunakan cURL (libcurl) pada php]]></title>
-            <link href="https://rempoah.com/blog/2017/06/01/belajar-php-curl/"/>
+            <link href="/blog/2017/06/01/belajar-php-curl/"/>
             <updated>2017-06-01T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/06/01/belajar-php-curl/</id>
+            <id>/blog/2017/06/01/belajar-php-curl/</id>
             <content type="html"><![CDATA[<p>Assalamu'laykum, kali ini kita akan belajar menggunakan cURL pada php. Bagi yang belum tahu, sebelum melangkah, sebaiknya terlebih dahulu kita selidiki secara singkat apakah sesungguhnya cURL itu.</p>
 
 <blockquote>
@@ -753,9 +759,9 @@ Referensi:</p>
         </entry>
             <entry>
             <title type="html"><![CDATA[Call barring password blocked - Indosat]]></title>
-            <link href="https://rempoah.com/blog/2014/03/24/call-barring-password-blocked/"/>
+            <link href="/blog/2014/03/24/call-barring-password-blocked/"/>
             <updated>2014-03-24T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2014/03/24/call-barring-password-blocked/</id>
+            <id>/blog/2014/03/24/call-barring-password-blocked/</id>
             <content type="html"><![CDATA[<p><img src="/images/posts/indosat_logo.jpg" alt="logo indosat" /></p>
 
 <p>Apa yang harus dilakukan ketika password Call Barring Terblokir?</p>
