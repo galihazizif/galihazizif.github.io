@@ -3,7 +3,7 @@
     <title><![CDATA[rempoah]]></title>
     <link href="https://rempoah.com/atom.xml" rel="self"/>
     <link href="https://rempoah.com/"/>
-    <updated>2017-11-15T10:45:58+07:00</updated>
+    <updated>2017-11-15T10:48:05+07:00</updated>
     <id>https://rempoah.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
@@ -265,6 +265,8 @@ $sql = " SELECT * FROM daftar_tamu";
             <updated>2017-10-10T00:00:00+07:00</updated>
             <id>https://rempoah.com/blog/2017/10/10/kereta-eksekutif-murah-dari-jakarta-ke-purwokerto/</id>
             <content type="html"><![CDATA[<p>Halo pembaca yang budiman, kali ini saya akan membagikan tips untuk mendapatkan harga tiket kereta eksekutif murah dari Jakarta ke Purwokerto.</p>
+
+<!-- break -->
 
 <p>Seperti yang kita ketahui, kereta kelas eksekutif lebih nyaman jika dibandingkan dengan kereta kelas bisnis dan ekonomi. Harganya pun sudah pasti jauh lebih mahal dari kedua kelas tersebut. Untuk relasi Jakarta (Gambir / Pasar Senen) - Purwokerto terdapat beberapa kisaran harga kelas eksekutif, pada hari-hari biasa (diluar libur panjang) berkisar antara 200ribu s.d 340ribu. Dalam satu rangkaian biasanya terdapat 4 sub-kelas, masing-masing sub kelas memiliki tarif yang berbeda.</p>
 
