@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rempoah.com</loc>
-    <lastmod>2017-12-02</lastmod>
+    <loc></loc>
+    <lastmod>2017-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</loc>
+    <loc>/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/</loc>
     <lastmod>2017-11-07T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/11/02/Mengubah-login-url-pada-yii-2/</loc>
+    <loc>/blog/2017/11/02/Mengubah-login-url-pada-yii-2/</loc>
     <lastmod>2017-11-02T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/10/10/kereta-eksekutif-murah-dari-jakarta-ke-purwokerto/</loc>
+    <loc>/blog/2017/10/10/kereta-eksekutif-murah-dari-jakarta-ke-purwokerto/</loc>
     <lastmod>2017-10-10T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/08/15/tarif-khusus-ka-komersial-daop-5/</loc>
+    <loc>/blog/2017/08/15/tarif-khusus-ka-komersial-daop-5/</loc>
     <lastmod>2017-08-15T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/08/06/ka-singasari-menggunakan-rangkaian-premium/</loc>
+    <loc>/blog/2017/08/06/ka-singasari-menggunakan-rangkaian-premium/</loc>
     <lastmod>2017-08-06T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/06/29/membuat-pesan-terenkripsi-menggunakan-gpg/</loc>
+    <loc>/blog/2017/06/29/membuat-pesan-terenkripsi-menggunakan-gpg/</loc>
     <lastmod>2017-06-29T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/06/29/cobain-yuk/</loc>
+    <loc>/blog/2017/06/29/cobain-yuk/</loc>
     <lastmod>2017-06-29T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2017/06/01/belajar-php-curl/</loc>
+    <loc>/blog/2017/06/01/belajar-php-curl/</loc>
     <lastmod>2017-06-01T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>https://rempoah.com/blog/2014/03/24/call-barring-password-blocked/</loc>
+    <loc>/blog/2014/03/24/call-barring-password-blocked/</loc>
     <lastmod>2014-03-24T00:00:00+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
