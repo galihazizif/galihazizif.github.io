@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[rempoah]]></title>
+    <link href="https://rempoah.com/blog/categories/SMS Gateway Android.xml" rel="self"/>
+    <link href="https://rempoah.com/"/>
+    <updated>2017-12-07T21:51:03+07:00</updated>
+    <id>https://rempoah.com/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[SMS Sender Gateway menggunakan Android]]></title>
+            <link href="https://rempoah.com/blog/2017/12/07/sms-gateway-android/"/>
+            <updated>2017-12-07T00:00:00+07:00</updated>
+            <id>https://rempoah.com/blog/2017/12/07/sms-gateway-android/</id>
+            <content type="html"><![CDATA[<p>Assalamu'laykum,</p>
+
+<p>Halo pembaca, kali ini saya akan membahas tentang salah satu cara menjadikan ponsel android kita
+sebagai gateway untuk mengirimkan SMS. 
+<!-- break -->
+Terkadang kita dihadapkan dengan beberapa keterbatasaan ketika akan mengintegrasikan pengiriman SMS kedalam aplikasi / Sistem. Beberapa diantaranya adalah
+Lokasi App / Sistem yang berada di environment luar jangkauan (WebHosting) atau keterbatasan dana untuk mengadakan modem SMS.</p>
+
+<p>Sebetulnya untuk masalah ini anda bisa menggunakan layanan SMS API yang banyak menjamur dimana-mana. Namun bagi anda yang ingin kontrol lebih terhadap ponsel pengirim SMS maupun nomor yang digunakan untuk mengirimkan SMS, anda dapat mencoba Semeses SMS Sender.</p>
+
+<h2 id="semeses-sms-sender"><a href="https://github.com/galihazizif/semeses-sms-gateway">Semeses SMS Sender</a></h2>
+
+<p><img src="http://semeses.rempoah.com/img/skema1.png" alt="Skema Semeses" /></p>
+
+<p>Aplikasi anda mengirimkan pesan yang akan dikirim melalui server semeses, server semeses menggunakan GCM untuk mengirimkan payload SMS ke ponsel android anda yang sudah terpasang aplikasi Semeses, kemudian aplikasi Semeses mengubah payload menjadi SMS dan dikirim ke nomor tujuan.</p>
+
+<p>Berikut ini langkah dapat menggunakan Semeses (dengan server Semeses)</p>
+
+<ol>
+<li><p>Unduh apk Semeses pada tautan berikut ini <a href="https://github.com/galihazizif/semeses-sms-gateway/releases">Unduh</a>. Atau
+unduh di Google Play Store</p></li>
+<li><p>Install dan jalankan</p></li>
+<li><p>Tunggu hingga muncul token registrasi, token tersebut adalah token registrasi Semeses ponsel anda di Firebase Cloud Messaging.
+<img src="/images/posts/semeses.jpg" alt="Screenshot Semeses" /></p></li>
+<li><p>Salin token registrasi tersebut untuk digunakan sebagai identitas ponsel anda.</p></li>
+</ol>
+
+<p>Kemudian kirimkan HTTP Request ke server Semeses dengan format seperti contoh berikut ini</p>
+
+<pre><code>https://semeses.rempoah.com/sendsms?reg_token=&lt;reg_token&gt;&amp;recipient=&lt;recipient&gt;&amp;message=&lt;message&gt;
+
+&lt;reg_token&gt; : Token registrasi yang ada pada app Semeses.
+&lt;recipient&gt; : Nomor penerima SMS
+&lt;message&gt;   : Pesan SMS
+</code></pre>
+
+<p>Contoh:</p>
+
+<pre><code>https://semeses.rempoah.com/sendsms?reg_token=abcdefghi123456&amp;recipient=081234567890&amp;message=HalloWord
+</code></pre>
+
+<p>Jika request berhasil dikirimkan, anda akan mendapatkan respon sukses seperti berikut ini.</p>
+
+<pre><code>{"status":0,"content":"OK"}
+</code></pre>
+
+<p>Tunggu beberapa saat dan SMS akan dikirimkan dari ponsel anda ke nomor tujuan. Semoga Bermanfaat.</p>
+]]></content>
+        </entry>
+    </feed>

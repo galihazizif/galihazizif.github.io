@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mengubah login url pada Yii2 Framework &mdash; rempoah</title>
+        <title>SMS Sender Gateway menggunakan Android &mdash; rempoah</title>
         <meta charset="utf-8">
         <meta name="theme-color" content="#ffffff">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@
                 <div class="col-md-8">
                         <article>
         <header>
-            <h2><a href="/blog/2017/11/02/Mengubah-login-url-pada-yii-2/">Mengubah login url pada Yii2 Framework</a></h2>
+            <h2><a href="/blog/2017/12/07/sms-gateway-android/">SMS Sender Gateway menggunakan Android</a></h2>
         </header>
 
 
@@ -94,29 +94,63 @@
         </script>
 
         <div>
-            <h2 id="cara-mengubah-login-url-pada-yii2-framework">Cara mengubah login url pada Yii2 Framework</h2>
+            <p>Assalamu'laykum,</p>
 
-<p>Assalamu'laykum warakhmatullah, kali ini saya ingin menulis tentang cara mengubah url login pada yii2. Bagi para pengguna framework yii2 tentu sudah tidak asing lagi dengan fasilitas otentikasi user yang sudah disediakan secara built-in pada yii2.</p>
-
+<p>Halo pembaca, kali ini saya akan membahas tentang salah satu cara menjadikan ponsel android kita
+sebagai gateway untuk mengirimkan SMS. 
 <!-- break -->
+Terkadang kita dihadapkan dengan beberapa keterbatasaan ketika akan mengintegrasikan pengiriman SMS kedalam aplikasi / Sistem. Beberapa diantaranya adalah
+Lokasi App / Sistem yang berada di environment luar jangkauan (WebHosting) atau keterbatasan dana untuk mengadakan modem SMS.</p>
 
-<p>Secara default, login url berada pada controller <code>Site</code> dan action <code>login</code>, namun ada kalanya kita harus mengganti halaman login tidak pada  <code>Site/login</code>.</p>
+<p>Sebetulnya untuk masalah ini anda bisa menggunakan layanan SMS API yang banyak menjamur dimana-mana. Namun bagi anda yang ingin kontrol lebih terhadap ponsel pengirim SMS maupun nomor yang digunakan untuk mengirimkan SMS, anda dapat mencoba Semeses SMS Sender.</p>
 
-<p>Untuk mengganti login url, kita cukup meng-override property <code>loginUrl</code> pada component <code>user</code> yang ada pada file konfigurasi. Jika pada file konfigurasi aplikasi Yii2 anda tidak terdapat component <code>user</code> maka perlu didefinisikan terlebih dahulu.</p>
+<h2 id="semeses-sms-sender"><a href="https://github.com/galihazizif/semeses-sms-gateway">Semeses SMS Sender</a></h2>
 
-<script src="https://gist.github.com/galihazizif/2303668b26c4eae4eae0d136bcb613cd.js"></script>
+<p><img src="http://semeses.rempoah.com/img/skema1.png" alt="Skema Semeses" /></p>
 
-<p>Setelah property <code>loginUrl</code> pada component <code>user</code> di override seperti konfigurasi diatas, halaman login akan diredirect ke url login yang baru.</p>
+<p>Aplikasi anda mengirimkan pesan yang akan dikirim melalui server semeses, server semeses menggunakan GCM untuk mengirimkan payload SMS ke ponsel android anda yang sudah terpasang aplikasi Semeses, kemudian aplikasi Semeses mengubah payload menjadi SMS dan dikirim ke nomor tujuan.</p>
 
-<p>Semoga bermanfaat.</p>
+<p>Berikut ini langkah dapat menggunakan Semeses (dengan server Semeses)</p>
+
+<ol>
+<li><p>Unduh apk Semeses pada tautan berikut ini <a href="https://github.com/galihazizif/semeses-sms-gateway/releases">Unduh</a>. Atau
+unduh di Google Play Store</p></li>
+<li><p>Install dan jalankan</p></li>
+<li><p>Tunggu hingga muncul token registrasi, token tersebut adalah token registrasi Semeses ponsel anda di Firebase Cloud Messaging.
+<img src="/images/posts/semeses.jpg" alt="Screenshot Semeses" /></p></li>
+<li><p>Salin token registrasi tersebut untuk digunakan sebagai identitas ponsel anda.</p></li>
+</ol>
+
+<p>Kemudian kirimkan HTTP Request ke server Semeses dengan format seperti contoh berikut ini</p>
+
+<pre><code>https://semeses.rempoah.com/sendsms?reg_token=&lt;reg_token&gt;&amp;recipient=&lt;recipient&gt;&amp;message=&lt;message&gt;
+
+&lt;reg_token&gt; : Token registrasi yang ada pada app Semeses.
+&lt;recipient&gt; : Nomor penerima SMS
+&lt;message&gt;   : Pesan SMS
+</code></pre>
+
+<p>Contoh:</p>
+
+<pre><code>https://semeses.rempoah.com/sendsms?reg_token=abcdefghi123456&amp;recipient=081234567890&amp;message=HalloWord
+</code></pre>
+
+<p>Jika request berhasil dikirimkan, anda akan mendapatkan respon sukses seperti berikut ini.</p>
+
+<pre><code>{"status":0,"content":"OK"}
+</code></pre>
+
+<p>Tunggu beberapa saat dan SMS akan dikirimkan dari ponsel anda ke nomor tujuan. Semoga Bermanfaat.</p>
 
         </div>
+                    <p class="categories">
+            Categories:
+                        <a href="https://rempoah.com/blog/categories/SMS%20Gateway%20Android">SMS Gateway Android</a>                        </p>
                 
                 <hr>
         <div class="row">
             <div class="col-md-12">
-                                        <a class="next btn btn-default btn-block" href="https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/" title="Membuat aplikasi buku tamu menggunakan PHP dan MySQL">&raquo; Membuat aplikasi buku tamu menggunakan PHP dan MySQL</a>
-                                                        <a class="next btn btn-default btn-block" href="https://rempoah.com/blog/2017/10/10/kereta-eksekutif-murah-dari-jakarta-ke-purwokerto/" title="Dari Jakarta ke Purwokerto Naik kereta Eksekutif Murah.">&laquo; Dari Jakarta ke Purwokerto Naik kereta Eksekutif Murah.</a>
+                                                        <a class="next btn btn-default btn-block" href="https://rempoah.com/blog/2017/11/07/membuat-aplikasi-buku-tamu-menggunakan-php-mysql/" title="Membuat aplikasi buku tamu menggunakan PHP dan MySQL">&laquo; Membuat aplikasi buku tamu menggunakan PHP dan MySQL</a>
                             </div>
         </div>
             <nav class="article">
@@ -133,7 +167,7 @@
     var disqus_shortname = 'blog-rempoah-com'; // required: replace example with your forum shortname
 
 
-    var disqus_identifier = '2017110301'; 
+    var disqus_identifier = '201712071'; 
     
     
     
