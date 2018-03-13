@@ -3,9 +3,63 @@
     <title><![CDATA[rempoah]]></title>
     <link href="https://rempoah.com/atom.xml" rel="self"/>
     <link href="https://rempoah.com/"/>
-    <updated>2017-12-07T21:51:03+07:00</updated>
+    <updated>2018-03-13T07:55:14+07:00</updated>
     <id>https://rempoah.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Review Huawei B310, si ramping yang banyak fungsi]]></title>
+            <link href="https://rempoah.com/blog/2018/03/12/review-huawei-b310/"/>
+            <updated>2018-03-12T00:00:00+07:00</updated>
+            <id>https://rempoah.com/blog/2018/03/12/review-huawei-b310/</id>
+            <content type="html"><![CDATA[<p>Assalamu'laykum, halo pembaca yang budiman. Kali ini saya akan mengangkat tema yang sedikit berbeda di tulisan amatir saya yang satu ini.
+Seperti yang tercantum pada judul, tulisan ini berisi tentang sedikit review Modem sekaligus Router Huawei B310, lebih tepatnya Huawei B310s-927.</p>
+
+<!-- break -->
+
+<p>Perangkat ini saya dapatkan dari salah satu online store di bukalapak. Setelah beberapa hari ditunggu, akhirnya si huawei ini datang juga.
+Diperlukan sekitar 3 hari bagi ekspedisi untuk mengirimkan barang ini dari jakarta ke tempat tinggal saya di Jawa Tengah.</p>
+
+<p>Salah satu penarik utama bagi saya untuk membeli perangkat ini adalah
+tersedianya port RJ45. Melalui port tersebut koneksi internet dapat diteruskan untuk perangkat dirumah yang tidak mempunyai interface wireless.</p>
+
+<p>Langsung saja kita masuk ke bagian review.
+Pada kemasan pembelian yang saya dapatkan, ada kartu garansi, brosur petunjuk penggunaan, sepasang antena eksternal dan sebuah AC Adapter dari huawei (12 Volt)</p>
+
+<p>Secara fisik perangkat Huawei B310 ini didesain untuk diletakkan diatas meja/permukaan datar secara tegak. Sedikit terlihat riskan untuk terguling jika tidak sengaja kita menyenggolnya.</p>
+
+<p>Berikut ini penampakan Huawei B310 dari samping.</p>
+
+<p><img src="/images/posts/photo_2018-03-13_07-36-21.jpg" alt="Huawei B310 tampak samping" /></p>
+
+<p>Perangkat ini memiliki beberapa indikator pada bagian depan.</p>
+
+<p><img src="/images/posts/photo_2018-03-13_07-36-29.jpg" alt="Huawei B310 tampak depan" /></p>
+
+<p>berikut ini maksud indiktor dari kiri ke kanan, barangkali gak keliatan :P</p>
+
+<ol>
+<li>Power</li>
+<li>WAN</li>
+<li>Wireless Network</li>
+<li>LAN</li>
+<li>Kekuatan Sinyal</li>
+</ol>
+
+<p>Kemudian, terdapat 3 port pada sisi belakang, port power, port RJ45 dan RJ11.</p>
+
+<p><img src="/images/posts/photo_2018-03-13_07-36-25.jpg" alt="Huawei B310 tampak belakang" /></p>
+
+<p>Sebelumnya saya sudah mencoba menguji port RJ11 pada Huawei B310 ini menggunakan sebuah pesawat telepon rumah dan ternyata berfungsi dengan normal untuk menerima dan melakukan panggilan.
+Tentunya setelah kartu sim dimasukan kedalam slot kartu.</p>
+
+<p><img src="/images/posts/photo_2018-03-13_07-36-12.jpg" alt="Huawei B310 tampak belakang" /></p>
+
+<p>Untuk penerimaan sinyal LTE maupun 3G dapat dikatakan sangat baik, mungkin karena terbantu dengan antena external yang disertakan oleh huawei.
+Kecepatan downstream/upstream yang diraih oleh modem/router ini juga tergolong sangat baik, walaupun tergantung juga oleh kondisi network provider.</p>
+
+<p>Semoga Bermanfaat.</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[SMS Sender Gateway menggunakan Android]]></title>
             <link href="https://rempoah.com/blog/2017/12/07/sms-gateway-android/"/>
@@ -859,27 +913,6 @@ Referensi:</p>
     </ol>
 
 <p></small></p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Call barring password blocked - Indosat]]></title>
-            <link href="https://rempoah.com/blog/2014/03/24/call-barring-password-blocked/"/>
-            <updated>2014-03-24T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2014/03/24/call-barring-password-blocked/</id>
-            <content type="html"><![CDATA[<p><img src="/images/posts/indosat_logo.jpg" alt="logo indosat" /></p>
-
-<p>Apa yang harus dilakukan ketika password Call Barring Terblokir?</p>
-
-<p>Sebelum kita bahas cara mengatasi password Call Barring yang terblokir ada baiknya kita kenalan dulu apa itu call barring.</p>
-
-<p><!-- break -->
-Jadi Call Barring adalah salah satu layanan yang ada di operator telekomunkasi yang fungsinya buat mencegah panggilan terjadi. Bisa mencegah panggilan masuk maupun panggilan keluar, tanpa harus mematikan ponsel. Jenis panggilan yang di barring pun ada macam-macam. Bisa panggilan suara, sms atau data. Operator di indonesia yang menyediakan layanan call barring kalau gak salah setau saya cuma satu "Indosat" . Entah dengan operator lain, apakah menyediakan layanan call barring atau tidak.
-Biasanya menu untuk mengaktifkan layanan ini ada di menu pengaturan panggilan, kadang ada di menu keamanan. Tergantung ponsel yang dipakai bro. Nah, waktu kita mau mengaktifkan layanan ini biasanya akan diminta password. Password default-nya adalah 1234. total ada 4 digit dan bisa diganti-ganti sesuka hati. Saat Call barring aktif untuk panggilan masuk suara / Voice Call, orang yang menghubungi kita akan mendapatkan pesan bahwa nomor yang anda tuju untuk sementara tidak dapat dihubungi. Kalau call barring aktif buat panggilan keluar, otomatis kita tidak bisa mengaktifkan panggilan, Call barring juga bisa berlaku untuk SMS. Silahkan lihat sendiri di pengaturan ponsel.</p>
-
-<p>Nah sekarang, bagaimana seandainya password call barring kita terblokir??
-Solusinya adalah hubungi 100 dari ponsel indosat anda. Kalau yang diblokir Outgoing Callnya? bisa hubungi costumer care indosat lewat twitter. :D</p>
-
-<p>Salam.</p>
 ]]></content>
         </entry>
     </feed>
