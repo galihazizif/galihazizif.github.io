@@ -3,9 +3,40 @@
     <title><![CDATA[rempoah]]></title>
     <link href="https://rempoah.com/atom.xml" rel="self"/>
     <link href="https://rempoah.com/"/>
-    <updated>2018-03-13T07:55:14+07:00</updated>
+    <updated>2018-06-20T20:23:18+07:00</updated>
     <id>https://rempoah.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[VPS Murah, dibawah 50 Ribu]]></title>
+            <link href="https://rempoah.com/blog/2018/06/20/vps-murah-dibawah-50-ribu/"/>
+            <updated>2018-06-20T00:00:00+07:00</updated>
+            <id>https://rempoah.com/blog/2018/06/20/vps-murah-dibawah-50-ribu/</id>
+            <content type="html"><![CDATA[<p>Assalamu'laykum, halo pembaca yang budiman. Kali ini saya berjualan VPS Murah, lokasi VPS ada di romania dan menggunakan OpenVZ. 
+VPS ini saya rasa cukup untuk kebutuhan komputasi yang ringan-ringan saja. Anda mempunyai kontrol yang lebih besar jika dibandingkan dengan shared hosting.
+Berikut ini rinciannya VPS Murah yang saya jual.</p>
+
+<p><img src="/images/posts/sale.png" alt="Screenshot Semeses" /><br />
+<!-- break --></p>
+
+<h3 id="vps-murah%2C-dibawah-50-ribu">VPS Murah, dibawah 50 Ribu</h3>
+
+<h4 id="vps-ro-a%2C-49-ribu-per-bulan">VPS RO A, 49 Ribu per Bulan</h4>
+
+<p><em>Storage</em> <strong>20GB</strong> 
+<em>Traffic</em> <strong>UNLIMITED - 1Gbps Shared</strong><br />
+<em>CPU</em> <strong>1Core</strong><br />
+<em>RAM</em> <strong>1024MB</strong><br />
+<em>IP</em> <strong>1 Dedicated IPv4</strong><br />
+<em>Lokasi</em> <strong>ROMANIA</strong><br />
+<em>Pilihan OS</em> <strong>Centos 5/6/7, Debian 6/7/8, Ubuntu 10.04/12.04/14.04/15.04</strong><br />
+<em>Harga</em> <strong>Rp. 49ribu / bulan</strong></p>
+
+<p>Satu lagi yang menjadi catatan, VPS ini adalah <em>Unmanaged VPS</em>, jadi anda sendiri yang bertanggung jawab melakukan kontrol,setup dan maintenance terhadap VPS ini layaknya seperti sebuah komputer/server.<br />
+Jika anda tertarik silahkan anda hubungi terlebih dahulu melalui chat untuk memastikan ketersediaan stok.</p>
+
+<script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '8a4e82f0-3209-4210-8b6b-6171f3fc3fd7', f: true }); done = true; } }; })();</script>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[Review Huawei B310, si ramping yang banyak fungsi]]></title>
             <link href="https://rempoah.com/blog/2018/03/12/review-huawei-b310/"/>
@@ -796,123 +827,6 @@ ini teks <em>italic</em></p>
 <hr />
 
 <p>Mudah mudahan bermanfaat, selamat mencoba.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[belajar menggunakan cURL (libcurl) pada php]]></title>
-            <link href="https://rempoah.com/blog/2017/06/01/belajar-php-curl/"/>
-            <updated>2017-06-01T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/06/01/belajar-php-curl/</id>
-            <content type="html"><![CDATA[<p>Assalamu'laykum, kali ini kita akan belajar menggunakan cURL pada php. Bagi yang belum tahu, sebelum melangkah, sebaiknya terlebih dahulu kita selidiki secara singkat apakah sesungguhnya cURL itu.</p>
-
-<blockquote>
-  <p>cURL merupakan sebuah tools berbasis command line yang dihasilkan oleh cURL Project yang digunakan untuk melakukan url transfer melalui berbagai protokol, seperti HTTP, FTP dsb.</p>
-</blockquote>
-
-<p>Sampai saat ini proyek tersebut masih aktif. Ada dua produk yang dihasilkan  dari proyek ini, yaitu <strong>cURL</strong> dan <strong>libcurl</strong>. cURL merupakan tools berbasis command line sementara libcurl merupakan library yang digunakan oleh cURL. Keduanya ditulis menggunakan bahasa C. libcurl memiliki <em>binding</em> pada banyak bahasa pemrograman sehingga kita bisa memakainya dengan mudah pada bahasa yang kita gunakan, beberapa diantaranya adalah C/C++, php, python dan kawan-kawan.</p>
-
-<p>Kita cukupkan saja intro mengenai cURL dan libcurl. 
-Selanjutnya mari kita langsung bermain dengan script, melakukan HTTP request menggunakan libcurl pada php. 
-<!-- break -->
-    &lt;?php</p>
-
-<pre><code>$url = 'http://example.com';
-
-$fields = [
-    'nama' =&gt; 'Joko',
-    'alamat' =&gt; 'Jalan Jenderal Soedirman 78, Purwokerto'
-];
-
-$agent = 'bukanChromeBukanFirefox';
-
-$timeout = 20; //detik
-
-$handle = curl_init();
-curl_setopt($handle,CURLOPT_URL, $url);
-
-//jika ingin menggunakan request bermethod POST
-curl_setopt($handle,CURLOPT_POST, 1);
-curl_setopt($handle,CURLOPT_POSTFIELDS, http_build_query($fields));
-//end POST
-
-curl_setopt($handle,CURLOPT_USERAGENT, $agent);
-curl_setopt($handle,CURLOPT_CONNECTTIMEOUT,$timeout);
-curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
-$data = curl_exec($handle);
-$httpcode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
-curl_close($handle);
-
-echo $data; //berisi respon dari server
-
-?&gt;
-</code></pre>
-
-<p>mari kita urai satu demi satu.</p>
-
-<pre><code>$handle = curl_init();
-</code></pre>
-
-<p>Memulai sebuah sesi cURL.</p>
-
-<hr />
-
-<pre><code>curl_setopt($handle,CURLOPT_URL, $url);  
-</code></pre>
-
-<p>Mengatur URL tujuan request yang akan dibuat.</p>
-
-<hr />
-
-<pre><code>curl_setopt($handle,CURLOPT_POST, 1);
-</code></pre>
-
-<p>Memberitahu libcurl bahwa request yang akan dibuat adalah POST request.</p>
-
-<hr />
-
-<pre><code>curl_setopt($handle,CURLOPT_POSTFIELDS, http_build_query($fields));
-</code></pre>
-
-<p>Memberitahu libcurl tentang muatan data yang akan dikirim melalui POST request.<br />
-Penggunaan fungsi <code>http_build_query()</code> mengubah array pada <code>$fields</code> menjadi string dalam bentuk <strong><em>urlencoded</em></strong>.<br />
-Jika data yang dimuat berupa string berbentuk <strong>encodedurl</strong> maka request yang akan dibuat akan memiliki <code>Content-type: application/x-www-form-urlencoded</code> pada headernya seperti pada form kebanyakan.<br />
-Namun jika data berbentuk array, maka request akan memiliki <code>Content-type: multipart/form-data</code> pada headernya layaknya form yang digunakan untuk mengupload file.</p>
-
-<hr />
-
-<pre><code>curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
-</code></pre>
-
-<p>Mengatur agar method <code>curl_exec()</code> mengembalikan mengembalikan nilai berupa string respon dari server tujuan.<br />
-Jika opsi ini tidak ditulis atau bernilai selain 1 maka hasil / respon dari server tujuan akan langsung ter <strong><em>echo</em></strong> dan kita akan kesusahan untuk mengolahnya.</p>
-
-<hr />
-
-<pre><code>$data = curl_exec($handle);
-</code></pre>
-
-<p>Mengeksekusi request cURL dan memasukan respon kembalian kedalam variabel <code>$data</code></p>
-
-<hr />
-
-<p>dan yang terakhir adalah jangan lupa untuk selalu membebaskan resource yang kita pakai jika sudah selesai digunakan.</p>
-
-<pre><code>curl_close($handle);
-</code></pre>
-
-<hr />
-
-<p>Sekian, semoga bermanfaat.</p>
-
-<p><small>
-Referensi:</p>
-
-<ol>
-        <li><a href="https://en.wikipedia.org/wiki/CURL">Wikipedia</a></li>
-        <li><a href="php.net/manual/en/">PHP Doc</a>
-    </ol>
-
-<p></small></p>
 ]]></content>
         </entry>
     </feed>
