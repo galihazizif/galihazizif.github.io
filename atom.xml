@@ -3,9 +3,38 @@
     <title><![CDATA[rempoah]]></title>
     <link href="https://rempoah.com/atom.xml" rel="self"/>
     <link href="https://rempoah.com/"/>
-    <updated>2019-06-15T04:33:13+07:00</updated>
+    <updated>2019-06-15T05:14:37+07:00</updated>
     <id>https://rempoah.com/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Scrap mutasi internet banking BRI (Teknis)]]></title>
+            <link href="https://rempoah.com/blog/2019/06/15/cek-scrap-mutasi-internet-banking-bri/"/>
+            <updated>2019-06-15T00:00:00+07:00</updated>
+            <id>https://rempoah.com/blog/2019/06/15/cek-scrap-mutasi-internet-banking-bri/</id>
+            <content type="html"><![CDATA[<p>Halo pembaca yang budiman, kali ini saya akan berbagi cara scrap mutasi internet banking BRI</p>
+
+<p><img src="/images/posts/bri.jpg" alt="'BRI - LOGO'" /></p>
+
+<!-- break -->
+
+<p>Bagi anda yang memiliki toko online sendiri pasti ada sedikit kendala dalam masalah otomatisasi konfirmasi pembayaran, saat ini sudah terdapat banyak payment gateway yang memberikan kemudahan dalam pemeriksaan pembayaran secara otomatis. Namun tentunya penggunaan layanan payment gateway dikenai biaya tertentu setiap transaksi.</p>
+
+<p>Bagi sebagian orang biaya per-transaksi tersebut cukup terjangkau, namun bagi sebagian yang lain masih dinilai terlalu mahal.</p>
+
+<p>Biasanya beberapa pegiat ecommerce mengambil solusi dengan menggunakan script scrapper internet banking untuk menyediakan konfirmasi otomatis pada toko online miliknya.</p>
+
+<p>Maka dari itu saya akan berbagi scrapper mutasi internet banking untuk Bank BRI.</p>
+
+<p>Sebelum mulai menggunakannya, pastikan anda sudah memiliki akun internet banking BRI yang aktif.
+Source code internet banking dapat diunduh pada repository berikut ini.</p>
+
+<p><a href="https://github.com/galihazizif/mutasi-bri">Mutasi Internet Banking BRI</a></p>
+
+<p>Selain itu pastikan anda menggunakan script ini pada komputer anda sendiri / VPS. Bukan digunakan di shared hosting.</p>
+
+<p>Semoga Bermanfaat</p>
+]]></content>
+        </entry>
             <entry>
             <title type="html"><![CDATA[VPS Murah, dibawah 50 Ribu]]></title>
             <link href="https://rempoah.com/blog/2018/06/20/vps-murah-dibawah-50-ribu/"/>
@@ -638,195 +667,6 @@ Berikut ini screenshot dari joko mengenai pesan selamat lebaran yang sudah kita 
 <img src="/images/posts/54c43ecc9c14e7e690c7f.jpg" alt="from joko" /></p>
 
 <p>Sekian, semoga bermanfaat.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Belajar menggunakan markdown]]></title>
-            <link href="https://rempoah.com/blog/2017/06/29/cobain-yuk/"/>
-            <updated>2017-06-29T00:00:00+07:00</updated>
-            <id>https://rempoah.com/blog/2017/06/29/cobain-yuk/</id>
-            <content type="html"><![CDATA[<h4 id="pernakahkah-mendengar-kata-markdown%3F">Pernakahkah mendengar kata markdown?</h4>
-
-<blockquote>
-  <p>Apakah markdown itu?</p>
-</blockquote>
-
-<p>Pada tahun 2004 markdown dibuat oleh John Gruber dan Aaron Swartz dengan tujuan agar menjadi bahasa markup plain-text yang mudah dalam penulisan dan mudah untuk dibaca.  <em>(disarikan dari <a href="https://wikipedia.org">Wikipedia</a>)</em></p>
-
-<p>Menurut sebagian orang, penggunaan markdown untuk menuangkan pikiran kedalam tulisan lebih memudahkan dibandingkan jika harus menggunakan <strong>WYSIWYG</strong> editor. Pen-formatan standar yang dibutuhkan dalam membuat tulisan sudah dicakup dalam markdown, sehingga tidak perlu untuk mengalihkan jari-jemari dari atas papan keyboard hanya untuk mengaplikasikan format tambahan pada teks yang kita tulis.</p>
-
-<!-- break -->
-
-<hr />
-
-<h3 id="%5C%3E%3E%3E-heading-">&#62;>> Heading &lt;&lt;&lt;</h3>
-
-<hr />
-
-<p><em>&#42;Penulisan <strong>Heading</strong>&#42;</em></p>
-
-<pre><code>    # heading 1  
-    ## heading 2  
-    ### heading 3  
-    #### heading 4  
-    ##### heading 5  
-    ###### heading 6   
-</code></pre>
-
-<hr />
-
-<p><em>&#42;Hasil <strong>Heading</strong>&#42;</em></p>
-
-<h1 id="heading-1">heading 1</h1>
-
-<h2 id="heading-2">heading 2</h2>
-
-<h3 id="heading-3">heading 3</h3>
-
-<h4 id="heading-4">heading 4</h4>
-
-<h5 id="heading-5">heading 5</h5>
-
-<h6 id="heading-6">heading 6</h6>
-
-<hr />
-
-<h3 id="%5C%3E%3E%3E-list-">&#62;>> List &lt;&lt;&lt;</h3>
-
-<hr />
-
-<p><em>&#42;Penulisan <strong>Unordered List</strong>&#42;</em></p>
-
-<pre><code>    - Bawang Putih  
-    - Bawang Merah  
-    - Tambahan:  
-        + MSG  
-        - Garam Inggris   
-</code></pre>
-
-<hr />
-
-<p><em>&#42;Hasil <strong>Unordered List</strong>&#42;</em></p>
-
-<ul>
-<li>Bawang Putih</li>
-<li>Bawang Merah</li>
-<li>Tambahan:
-
-<ul>
-<li>MSG</li>
-<li>Garam Inggris</li>
-</ul></li>
-</ul>
-
-<hr />
-
-<p><em>&#42;Penulisan <strong>Ordered List</strong>&#42;</em></p>
-
-<pre><code>    1. Indonesia
-        a. Jawa Tengah
-        b. Sulawesi Tengah
-    2. Malaysia
-        a. Kuching
-        b. Serawak
-    3. Thailand
-</code></pre>
-
-<hr />
-
-<p><em>&#42;Hasil <strong>Ordered List</strong>&#42;</em></p>
-
-<ol>
-<li>Indonesia<br />
-a. Jawa Tengah<br />
-b. Sulawesi Tengah</li>
-<li>Malaysia<br />
-a. Kuching<br />
-b. Serawak</li>
-<li>Thailand</li>
-</ol>
-
-<hr />
-
-<h3 id="%5C%3E%3E%3E-format-teks-">&#62;>> Format Teks &lt;&lt;&lt;</h3>
-
-<hr />
-
-<p><em>&#42;Penulisan <strong>Format Teks</strong>&#42;</em></p>
-
-<pre><code>    ini teks **tebal**
-    ini teks *italic*
-    ini teks _italic_
-</code></pre>
-
-<hr />
-
-<p><em>&#42;Hasil <strong>Format Teks</strong>&#42;</em></p>
-
-<p>ini teks <strong>tebal</strong><br />
-ini teks <em>italic</em><br />
-ini teks <em>italic</em></p>
-
-<hr />
-
-<h3 id="%5C%3E%3E%3E-blockquotes-">&#62;>> Blockquotes &lt;&lt;&lt;</h3>
-
-<hr />
-
-<p><em>&#42;Penulisan <strong>Blockquotes</strong>&#42;</em></p>
-
-<pre><code>    &gt; ini adalah blockquotes,
-</code></pre>
-
-<hr />
-
-<p><em>&#42;Hasil <strong>Blockquotes</strong>&#42;</em></p>
-
-<blockquote>
-  <p>ini adalah blockquotes,</p>
-</blockquote>
-
-<h3 id="%5C%3E%3E%3E-link-">&#62;>> Link &lt;&lt;&lt;</h3>
-
-<hr />
-
-<p><em>&#42;Penulisan <strong>Link</strong>&#42;</em></p>
-
-<pre><code>    [Nama Tujuan](www.example.com)
-    [rempoah](http://rempoah.com)
-</code></pre>
-
-<hr />
-
-<p><em>&#42;Hasil <strong>Link</strong>&#42;</em></p>
-
-<p><a href="www.example.com">Nama Tujuan</a><br />
-<a href="http://rempoah.com">rempoah</a></p>
-
-<hr />
-
-<h3 id="%5C%3E%3E%3E-gambar-">&#62;>> Gambar &lt;&lt;&lt;</h3>
-
-<hr />
-
-<p><em>&#42;Penulisan Tag <strong>Gambar</strong>&#42;</em></p>
-
-<p>Untuk memasukan gambar pada markdwon sebenarnya sangat mudah, tinggal menambahkan tanda seru seperti pada saat membuat <strong>Link</strong>.</p>
-
-<pre><code>![Logo Google](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png)
-</code></pre>
-
-<hr />
-
-<p><em>&#42;Hasil <strong>Gambar</strong>&#42;</em></p>
-
-<p><img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png" alt="Logo Google" /></p>
-
-<hr />
-
-<hr />
-
-<p>Mudah mudahan bermanfaat, selamat mencoba.</p>
 ]]></content>
         </entry>
     </feed>
